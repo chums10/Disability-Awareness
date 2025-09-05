@@ -1,0 +1,241 @@
+/* --------------------- */
+/* General Reset */
+/* --------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: #fafafa;
+  color: black;
+}
+
+/* --------------------- */
+/* Title section */
+/* --------------------- */
+.title-section {
+  background: #FF6347;
+  color: black;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.title-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* --------------------- */
+/* Infographic label */
+/* --------------------- */
+.infographic-label {
+  background: black;
+  text-align: center;
+  padding: 1rem;
+}
+
+.infographic-label p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* --------------------- */
+/* Stats Section: image left, stats right */
+/* --------------------- */
+.stats-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* Left image */
+.stats-image img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Right stats */
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
+  flex: 1;
+  row-gap: 1.5rem;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    max-height: 600px;
+    overflow-y: auto; 
+    padding-right: 1rem; 
+    box-sizing: border-box;
+
+}
+
+/* Each stat row */
+.stat {
+  display: flex;
+  align-items: stretch; /* make number box and text box same height */
+  gap: 1rem;
+  max-width: 650px;
+}
+
+/* Box around the number */
+.stat-number-box {
+  background: black;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  height: 100%; /* match text box height */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Number inside the box */
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Colored text box */
+.stat-text {
+  flex: 1;
+  background: #FFB347;  /* default, overridden by class */
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Box colors for text */
+.orange .stat-text { background: #FFB347;}
+.red .stat-text { background: #FF6347; }
+.darkorange .stat-text { background: #FF8C00; }
+
+/* --------------------- */
+/* Info grid (3 columns) */
+/* --------------------- */
+.info-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  flex: 1;
+  min-width: 250px;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.info-card h3 {
+  margin-bottom: 0.5rem;
+  color: #e85c47;
+}
+
+/* --------------------- */
+/* Highlight section */
+/* --------------------- */
+.highlight {
+  text-align: center;
+  background: #f9b233;
+  padding: 2rem 1rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.highlight h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+/* --------------------- */
+/* Footer */
+/* --------------------- */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+footer h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* --------------------- */
+/* Responsive for mobile */
+/* --------------------- */
+@media (max-width: 600px) {
+
+  /* Stats section vertical */
+  .stats-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  /* Stats container stacked */
+  .stats {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  /* Each stat full width */
+  .stat {
+    width: 100%;
+  }
+
+  /* Number box smaller */
+  .stat-number-box {
+    min-width: 60px;
+    padding: 0.5rem;
+  }
+
+  /* Text box full width */
+  .stat-text {
+    padding: 0.5rem;
+  }
+
+  /* Image scales for mobile */
+  .stats-image img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  /* Info grid stacked */
+  .info-grid {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li, a, .info-card, .stat-text, .stat-number, .highlight, .footer {
+  font-family: Baskerville, serif;
+}
